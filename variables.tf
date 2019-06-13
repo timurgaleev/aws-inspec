@@ -8,15 +8,22 @@ connect.
 
 Example: ~/.ssh/terraform.pub
 DESCRIPTION
+  default     = "~/.ssh/id_rsa.pub"
 }
 
 variable "key_name" {
   description = "Desired name of AWS key pair"
+  default     = "Terraform"
 }
 
 variable "aws_region" {
   description = "AWS region to launch servers."
   default     = "eu-central-1"
+}
+
+variable "private_key_path" {
+  description = "Path to SSH private key"
+  default     = "~/.ssh/id_rsa"
 }
 
 # Ubuntu Precise 18.04 LTS (x64)
