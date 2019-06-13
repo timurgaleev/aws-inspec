@@ -17,7 +17,7 @@ end
 
 control 'etc-1.0' do
   impact 0.7
-  describe etc_fstab.where { mount_point == '/mnt/sda1' } do
-    its('device_name') { should cmp '/dev/sda1' }
+  describe etc_fstab.where { mount_point == '/mnt/xvda' } do
+    it { should exist }
   end
 end
